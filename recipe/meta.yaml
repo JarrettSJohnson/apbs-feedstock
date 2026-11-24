@@ -38,7 +38,7 @@ requirements:
 test:
     commands:
         # apbs --version exits with code 13, which is expected
-        - apbs --version || test $? -eq 13   # [unix and (build_platform == target_platform or linux)]
+        - apbs --version || test $? -eq 13   # [unix and build_platform == target_platform]
         - apbs --version || ver > nul  # [win] ignore exit code, just verify binary runs
 
 about:
